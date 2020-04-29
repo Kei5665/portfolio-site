@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <title>My portfolio</title>
+  <style>
+    .h-cover{
+      background-image: url(images/h-cover.jpg);
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+    .h-message{
+      background: rgba(110, 80, 100, .7);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    #about img{
+      border-radius: 50%;
+    }
+    .works-img {
+      width: 80%;
+      height: 300px;
+      border: rgba(110, 80, 100, .2) solid 2px;
+    }
+    .works-img:hover {
+      box-shadow: 3px 3px 10px 10px  rgba(110, 80, 100, .7);
+      transition: 0.3s;
+    }
+    .works-contents {
+      box-sizing:border-box ;
+    }
+    .box17{
+    margin:2em 0;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px yellow;
+    border-bottom: solid 2px yellow;
+    }
+    .box17:before, .box17:after{
+        content: '';
+        position: absolute;
+        top: -10px;
+        width: 2px;
+        height: -webkit-calc(100% + 20px);
+        height: calc(100% + 20px);
+        background-color: yellow;
+    }
+    .box17:before {left: 10px;}
+    .box17:after {right: 10px;}
+    .box17 p {
+        margin: 0; 
+        padding: 0;
+        font-size: 18px;
+    }
+    .my-skyblue {
+      color: skyblue;
+    }
+    .my-skyblue:hover {
+      color: rgb(80, 191, 235);
+      transition: .3s;
+    }
+    #service {
+      background-image: url(images/bg-sea.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .service {
+      background-color: rgba(215,206,187, .7);
+    }
+        /* 大デバイス（デスクトップ, 1200px 未満） */
+    @media (min-width: 992px) {
+    .title {
+      font-size: 4.0rem;
+    }
+    .m-img {
+      width: 80%;
+    }
+    }
+        /* 中デバイス（タブレット, 992px 未満） */
+    @media (max-width: 991.98px) {
+    .title {
+      font-size: 3.0rem;
+    }
+    .m-img {
+      width: 100%;
+    }
+    }
+       /* 小デバイス（横向きモバイル, 768px 未満） */
+    @media (max-width: 767.98px) {
+    .title {
+      font-size: 2.0rem;
+    }
+    .m-img {
+      width:70%;
+    }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <section>
+      <nav class="navbar navbar-expand-sm navbar-light bg-light py-4">
+        <a href="" class="navbar-brand"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="menu" class="collapse navbar-collapse justify-content-center">
+        <ul class="navbar-nav display-4 w-100 nav-justified">
+          <li class="nav-item"><a href="#about" class="nav-link text-dark title">About</a></li>
+          <li class="nav-item"><a href="#works" class="nav-link text-dark title">Works</a></li>
+          <li class="nav-item"><a href="#service" class="nav-link text-dark title">Service</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link text-dark title">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </section>
+    <section class="h-cover d-flex align-items-center">
+      <div class="h-message text-center py-2 w-100">
+        <h1 class="display-3 text-dark">Hello world!</h1>
+        <h1 class=" display-4 mb-4 text-dark">I'm Kei</h1>
+        <p class="font-weight-bold">見る人に<span class="text-warning">想い</span>が伝わるデザインを目指して</p>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section id="about">
+    <h1 class="display-3 text-center py-5">About</h1>
+      <div class="container">
+        <div class="row">
+        <div class="text-center mb-5 col-sm-6">
+          <img class="m-img" src="images/IMG_0282.jpg">
+        </div>
+        <div class="col-sm-6 m-plof">
+          <h2>プロフィール</h2>
+          <h2>Kei</h2>
+          <p class="mb-4 mb-md-5">平成８年生まれ　23歳。山形県在住。<br>
+            ウェブデザイナーを目指し日々勉強中。
+            趣味はギター、ピアノを弾くこと。動画編集も少しやります。
+          </p>
+          <h2>スキル</h2>
+          <p>HTML/CSS/Bootstrap/JavaScript(jQuery)を使ったウェブ制作</p>
+        </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light text-center pb-5" id="works">
+      <h1 class="display-3 py-5">Works</h1>
+      <p class="mb-5">これまでの制作物です。クリックしてご覧ください</p>
+      <!-- 制作物のトップ画像 -->
+      <div class="container works-contents">
+        <div class="row">
+          <div class="col-sm-4 p-1 mb-3">
+            <a type="button" data-toggle="modal" data-target="#exampleModal-1">
+              <img class="works-img" src="images/page-1-1.png">
+            </a>
+          </div>
+          <div class="col-sm-4 p-1 mb-3">
+            <a type="button" data-toggle="modal" data-target="#exampleModal-2">
+              <img class="works-img" src="images/page-2-1.png">
+            </a>
+          </div>
+          <div class="col-sm-4 p-1 mb-3">
+            <a type="button" data-toggle="modal" data-target="#exampleModal-3">
+              <img class="works-img" src="images/cafe-1.png">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 制作物モーダル -->
+      <div class="modal fade" id="exampleModal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">サンプルサイトの模写</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body container py-2" data-spy="scroll">
+              <img src="images/page-1-1.png" alt="">
+              <img src="images/page-1-2.png" alt="">
+              <img src="images/page-1-3.png" alt="">
+              <img src="images/page-1-4.png" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+            </div><!-- /.modal-footer -->
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      <!-- 制作物モーダル -->
+      <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">サンプルサイトの模写</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body container py-2" data-spy="scroll">
+              <img src="images/page-2-1.png" alt="">
+              <img src="images/page-2-2.png" alt="">
+              <img src="images/page-2-3.png" alt="">
+              <img src="images/page-2-4.png" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+            </div><!-- /.modal-footer -->
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      <!-- 制作物モーダル -->
+      <div class="modal fade" id="exampleModal-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">サンプルサイトの模写</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body container py-2" data-spy="scroll">
+              <img src="images/cafe-1.png" alt="">
+              <img src="images/cafe-2.png" alt="">
+              <img src="images/cafe-3.png" alt="">
+              <img src="images/cafe-4.png" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+            </div><!-- /.modal-footer -->
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </section>
+    <section class="py-5 text-center" id="service">
+      <div class="container service">
+        <h1 class="display-3 pt-5">Service</h1>
+        <p class="mb-5">提供できるサービスです</p>
+        <div class="row">
+          <div class="col-sm-8 offset-sm-4 mb-5">
+            <h2 class="mt-5">LP製作</h2>
+            <i class="fas fa-laptop fa-3x"></i>
+            <div class="box17 py-5">
+              <p>お客様のご要望をヒアリングし、ご要望に沿ったランディングページを作成いたします。</p>
+            </div>
+          </div>
+          <div class="col-sm-8 mb-5">
+            <h2 class="">コーディング</h2>
+            <i class="fas fa-keyboard fa-3x"></i>
+            <div class="box17 py-5">
+              <p>お客様よりお預かりしたデザインデータを基に、適切にコーディングいたします。</p>
+            </div>
+          </div>
+          <div class="col-sm-8 offset-sm-4 mb-5">
+            <h2>レスポンシブ対応</h2>
+            <i class="fas fa-mobile-alt fa-4x"></i>
+            <div class="box17 py-5">
+              <p>PC・タブレット・スマホ、どの端末でもストレスなく閲覧できるようにレスポンシブ対応いたします。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="bg-light text-center py-5" id="contact">
+      <h1 class="display-3">Contact</h1>
+      <p class="mb-5">ご意見ご要望があればこちら(↓クリック)のDMからお願いします。</p>
+      <a href="https://twitter.com/kiitch1019"><i class="fab fa-twitter-square my-skyblue fa-5x"></i></a>
+    </section>
+  </main>
+  <footer class="text-center">
+    <p class="text-muted py-3">copyright©︎ Kei portfolio.2020</p>
+  </footer>
+
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
